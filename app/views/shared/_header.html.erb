@@ -1,0 +1,22 @@
+
+<% if user_signed_in? %>
+  <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <%= link_to 'Budget', user_categories_path(current_user), class:'navbar-brand fs-4'%>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+      <ul class="navbar-nav d-flex align-items-lg-center d-sm-flex justify-content-sm-start">
+        <li class="nav-item">
+          <%=link_to  'Catagories', user_categories_path(current_user), class: 'nav-link active'%>
+        </li>
+      </ul>
+      <li class="d-flex justify-content-end align-items-center ml-auto">
+          <p style="color: silver; margin: auto 20px auto auto; font-weight: bolder; font-size: 20px"><%=current_user.name %></p>
+          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger  text-end', data: { turbo_confirm: "Are you sure?"}%>
+      </li>
+    </div>
+  </div>
+</nav>
+<%end%>
