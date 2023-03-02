@@ -1,2 +1,2 @@
-class GroupsCategoriesController < ApplicationController
+class CategoriesTransactsController < ApplicationController
 end
