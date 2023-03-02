@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <hr class="my-4">
+  <div class=" d-flex justify-content-around" style='align-items: center'>
+   <div>
+     <p><b><%= transact.name %></b></p>
+     <p class=''><small class="text-muted"><%=transact.created_at.to_formatted_s(:long_ordinal)  %> </small></p>
+   </div>
+    <strong>$<%=transact.amount %></strong>
+  </div>
+   <hr>
+  <%#= button_to "Destroy this expense", user_category_transact_url(current_user,@category, transact), method: :delete %>
+</div>

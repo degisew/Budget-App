@@ -1,0 +1,19 @@
+<%= form_with model: transact, url: user_category_transacts_url do |f| %>
+  <div class="form-group p-2">
+    <%= f.label :Name, class: 'form-label' %>
+    <%=f.text_field :name, class: 'form-control', placeholder: 'transaction name'%>
+  </div>
+  <div class="form-group p-2">
+    <%= f.label :Amount, class: 'form-label' %>
+    <em>(in USD)</em>
+    <%=f.number_field :amount, class: 'form-control', min: '0'%>
+  </div>
+  <div class="form-group p-2">
+    <%= f.label :Category, class: 'form-label' %>
+    <%=f.select :category, [[category.name, category.id]], selected: "#{category.id}" %>
+  </div>
+  <div class='actions p-2'>
+  <%= f.submit 'Save', class: 'btn btn-primary mb-3' %><br>
+  <%=link_to 'Back', user_category_transacts_path(current_user, params[:category_id]) %>
+  </div>
+<%end %>
