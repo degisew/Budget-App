@@ -1,4 +1,4 @@
-class GroupCategory < ApplicationRecord
+class CategoryTransact < ApplicationRecord
   belongs_to :category
   belongs_to :category
 end
