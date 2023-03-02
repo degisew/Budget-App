@@ -1,2 +1,2 @@
-module GroupsCategoriesHelper
+module CategoriesTransactsHelper
 end
