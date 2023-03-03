@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe CategoryTransact, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'should belongs to category' do
+    should belong_to(:category)
+  end
+  it 'should belongs to transact' do
+    should belong_to(:transact)
+  end
 end
