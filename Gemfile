@@ -12,8 +12,8 @@ gem 'sprockets-rails'
 # Use Postgres as the database for Active Record
 gem 'pg'
 
-# user rspec for your tests
-# gem 'rspec-rails'
+# user cancancan for authorization resources
+gem 'cancancan'
 
 # use users for your user authentication
 gem 'devise'
