@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :categories, foreign_key: :author_id, dependent: :destroy
   validates :name, presence: true
   validates :password, presence: true, length: { minimum: 6 }
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: { case_sensitive: false }
   # has_one_attached :photo
 
   def all_categories
