@@ -1,6 +1,8 @@
 databases:
   - name: postgres
-  - ipAllowList: []
+    databaseName: postgres
+    user: postgres
+    ipAllowList: []
 services:
   - type: web
     name: rails
