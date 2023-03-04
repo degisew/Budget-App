@@ -1,0 +1,22 @@
+<%= link_to user_category_transacts_path(current_user, category), class: 'text-decoration-none' do %>
+  <div class="card mb-3 p-1 mw-100 d-grid" >
+  <div class="row g-0" style='height: 100px; display: flex; justify-content: space-between; align-items: center'>
+    <div class="col-md-3 " style='height: 100px;'>
+      <%=image_tag category.icon, class:'img-fluid rounded-start w-50 rounded', alt: 'Cat-icon', style: 'height: 100px;'%>
+    </div>
+    <div class="col-md-3">
+      <div class="card-body">
+        <h5 class="card-title"><%=category.name %></h5>
+        <p class="card-text "><small class="text-muted"><%=category.created_at.to_date.to_formatted_s(:long)  %> </small></p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-body">
+        <strong>$<%=category.total_amount %></strong>
+      </div>
+    </div>
+</div>
+
+</div>
+<%end %>

@@ -1,2 +1,0 @@
-class GroupsCategoriesController < ApplicationController
-end

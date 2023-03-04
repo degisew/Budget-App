@@ -1,0 +1,10 @@
+<div class='container text-center w-50 mx-auto pt-3'>
+  <% if @categories.empty?%>
+  <p>Sorry, You have not added any category yet!</p>
+  <% else %>
+  <%@categories.each do |category| %>
+    <%=render 'index', category:category %>
+  <%end %>
+  <%end %>
+  <%= link_to 'Add New Category', new_user_category_path, class: 'btn btn-primary' %>
+</div>

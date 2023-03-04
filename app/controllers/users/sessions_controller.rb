@@ -17,7 +17,9 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # protected
-
+  def after_sign_in_path_for(_resource)
+    user_categories_path(current_user) # your path
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])

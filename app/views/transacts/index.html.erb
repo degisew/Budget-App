@@ -1,0 +1,13 @@
+<div class='container text-center w-50 mx-auto pt-3'>
+  <strong>Total Amount: $<%=@category.total_amount || 0%></strong><br><br>
+  <i class="display-6"><%=@category.name %></i>
+  <% if @all_transactions.empty?%>
+    <p >Sorry, You have not added any transaction yet!</p>
+  <% else %>
+  <%@all_transactions.each do |transact| %>
+  <%=render 'index', transact: transact, category: @category %>
+    <%end %>
+    <%end %>
+  <%= link_to 'Add New Transaction', new_user_category_transact_path, class:'btn btn-primary' %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= link_to 'Back', user_categories_path, class:'btn btn-dark text-white ' %>
+</div>
